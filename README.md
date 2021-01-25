@@ -228,3 +228,6 @@ not commit irrelevant files to the VCS (eg, anything under `__pycache__` or your
 editor/IDE configurations).  Never `git add *` or `git commit -a`!  They lump
 all your changes together; you want each commit to be a logical bit of history
 that captures what was done and why in a cohesive unit.
+
+Hi this is Alex
+
