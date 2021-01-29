@@ -105,5 +105,5 @@ class PyramidTests(TestCase):
         self._assert_expected(2, "-=-\n" + "===\n")
 
 
-if __name__ == "__main__":
-    #main()
+# if __name__ == "__main__":
+# main()
