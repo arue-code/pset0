@@ -5,7 +5,7 @@ assignment!
 
 Replace the below with your own build badges:
 
-[![Build Status](https://travis-ci.com/csci-e-29/0000aa-pset-0-starter.svg?branch=master)](https://travis-ci.com/csci-e-29/0000aa-pset-0-starter)
+[![Build Status](https://travis-ci.com/arue-code/pset0.svg?branch=pset0-edit)](https://travis-ci.com/arue-code/pset0)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
