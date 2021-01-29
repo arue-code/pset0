@@ -53,7 +53,7 @@ class FibTests(TestCase):
     def test_fibonnacci(self):
         for n, expected in [
             # Check progressively more complex values, see if time out
-            (0, 1),
+            (0, 0),
             (1, 1),
             (6, 8),
             (10, 55),
@@ -70,9 +70,7 @@ class FibTests(TestCase):
         ss = SummableSequence(0, 1)
         for n in range(0, 50, 5):
             with timeout(message="Timeout running f({})".format(n)):
-                raise NotImplementedError(
-                    "You should implement this and other SummableSequence tests!"
-                )
+                self.assertEqual(ss(n), fib(n))
 
 
 class TestTimeout(TestCase):

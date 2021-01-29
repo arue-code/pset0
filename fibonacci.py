@@ -15,6 +15,8 @@ def last_8(some_int):
 
 
 def fib(n):
+    if n == 0:
+        return 0
     v1, v2, v3 = 1, 1, 0
     for rec in bin(n)[3:]:
         calc = v2 * v2
@@ -30,12 +32,18 @@ class SummableSequence(object):
         self.myAttr = args
 
     def __call__(self, i, *args):
-        # fibm = np.matrix([1])
-        fibm = np.matrix([[0, 1, 0], [0, 0, 1], [1, 1, 1]], dtype=object)
         initial = np.array(self.myAttr, dtype=object)
-        finalmatrix = np.linalg.matrix_power(fibm, i)
-        fibnum = np.matmul(finalmatrix, initial)
-        return fibnum[0, 0]
+        inputsize = len(initial)
+        if inputsize == 2:
+            fibm = np.matrix([[0, 1], [1, 1]], dtype=object)
+            finalmatrix = np.linalg.matrix_power(fibm, i)
+            fibnum = np.matmul(finalmatrix, initial)
+            return fibnum[0, 0]
+        if inputsize == 3:
+            fibm = np.matrix([[0, 1, 0], [0, 0, 1], [1, 1, 1]], dtype=object)
+            finalmatrix = np.linalg.matrix_power(fibm, i)
+            fibnum = np.matmul(finalmatrix, initial)
+            return fibnum[0, 0]
 
 
 if __name__ == "__main__":
