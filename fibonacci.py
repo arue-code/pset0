@@ -25,11 +25,11 @@ def fib(n):
 
 
 class SummableSequence(object):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args):
         # self.__dict__.update(**kwargs)
         self.myAttr = args
 
-    def __call__(self, i, *args, **kwargs):
+    def __call__(self, i, *args):
         # fibm = np.matrix([1])
         fibm = np.matrix([[0, 1, 0], [0, 0, 1], [1, 1, 1]], dtype=object)
         initial = np.array(self.myAttr, dtype=object)
