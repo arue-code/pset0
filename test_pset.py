@@ -53,7 +53,7 @@ class FibTests(TestCase):
     def test_fibonnacci(self):
         for n, expected in [
             # Check progressively more complex values, see if time out
-            (0, 0),
+            (0, 1),
             (1, 1),
             (6, 8),
             (10, 55),
