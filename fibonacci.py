@@ -14,12 +14,14 @@ def last_8(some_int):
     return lasteight
 
 
-def optimized_fibonacci(f):
-    fibm = np.matrix([[1, 1], [1, 0]])
-    initial = np.array([1, 1])
-    finalmatrix = np.linalg.matrix_power(fibm, f - 1)
-    fibnum = np.matmul(finalmatrix, initial)
-    return fibnum[0, 1]
+def fib(n):
+    v1, v2, v3 = 1, 1, 0
+    for rec in bin(n)[3:]:
+        calc = v2 * v2
+        v1, v2, v3 = v1 * v1 + calc, (v1 + v3) * v2, calc + v3 * v3
+        if rec == "1":
+            v1, v2, v3 = v1 + v2, v1, v2
+    return v2
 
 
 class SummableSequence(object):
@@ -38,7 +40,7 @@ class SummableSequence(object):
 
 if __name__ == "__main__":
 
-    print("f(100000)[-8:]", last_8(optimized_fibonacci(100000)))
+    print("f(100000)[-8:]", last_8(fib(100000)))
 
     ss = SummableSequence(0, 1)
     new_seq = SummableSequence(5, 7, 11)
